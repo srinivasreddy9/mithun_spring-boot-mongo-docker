@@ -20,7 +20,7 @@ node{
         withCredentials([string(credentialsId: 'DOKCER-HUB-PASSWORD', variable: 'DOKCER-HUB-PASSWORD')]) {
           sh "docker login -u dockerhub83 -p ${DOKCER-HUB-PASSWORD}"
         }
-        sh 'docker push dockerhandson/spring-boot-mongo'
+        sh "docker push dockerhub83/spring-boot-mongo"
      }
      
      stage("Deploy To Kuberates Cluster"){
